@@ -4,6 +4,11 @@
     background-position: center;
     position: relative;
   }
+
+  h1{
+    position: relative;
+    bottom: 63%
+  }
   
   .hero::after {
     content: "";

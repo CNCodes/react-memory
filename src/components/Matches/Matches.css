@@ -2,5 +2,14 @@ img {
     float: left;
     height: 250px;
     width: 250px;
+    
+}
+
+img:hover {
+    box-shadow: black 3px 7px 8px;
+}
+
+.match{
     padding-left: 20px;
+    padding-bottom: 5px;
 }
