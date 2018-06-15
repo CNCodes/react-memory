@@ -19,9 +19,6 @@ class Match extends Component {
           const j = Math.floor(Math.random() * (i + 1));
           [a[i], a[j]] = [a[j], a[i]];
       }
-      if(this.state.score > this.state.highScore){
-        this.setState({highScore: this.state.score})
-      }
       this.setState(a);
   }
 
@@ -37,6 +34,9 @@ class Match extends Component {
         } else {
           if(!newArray.includes(id))
           newArray.push(id);
+          if(this.state.score > this.state.highScore){
+            this.setState({highScore: this.state.score})
+          }
           this.setState(function(prevState, props){return ({score: prevState.score + 1})});
           this.setState({clickedArray: newArray});
           this.shuffle(matches);
