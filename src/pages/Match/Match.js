@@ -32,7 +32,7 @@ class Match extends Component {
         } else {
           if(!newArray.includes(id))
           newArray.push(id);
-          this.setState({score: this.state.score + 1});
+          this.setState(function(prevState, props){return ({score: prevState.score + 1})});
           this.setState({clickedArray: newArray});
           this.shuffle(matches);
         }
